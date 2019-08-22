@@ -4,8 +4,6 @@ const Discord = require('discord.js');
 
 const bot = new Client();
 
-const token = 'NjA4Mzk2Mjg0NTA3ODQ4ODQ3.XUnjOA.AEpGkSV5xU5ko1VDHo-wGn3e0iY';
-
 const PREFIX = "$";
 
 const onCooldown = new Set();
@@ -309,4 +307,4 @@ bot.on('guildMemberAdd', member =>{
     channel.send(`Welcome to ${member.guild.name}, ${member}, please read the rules in the rules channel`);
 })
 
-bot.login(token);
+bot.login(process.env.BOT_TOKEN);
